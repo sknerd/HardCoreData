@@ -3,23 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		814B106A239E769600FB5E7E /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814B1069239E769600FB5E7E /* Band.swift */; };
+		814B106D239E7B0A00FB5E7E /* AddBandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814B106C239E7B0A00FB5E7E /* AddBandController.swift */; };
+		81B21C9D239E8CC200290DBE /* LBTATools in Frameworks */ = {isa = PBXBuildFile; productRef = 81B21C9C239E8CC200290DBE /* LBTATools */; };
 		81DA9988239E5DB80086E24A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA9987239E5DB80086E24A /* AppDelegate.swift */; };
 		81DA998A239E5DB80086E24A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA9989239E5DB80086E24A /* SceneDelegate.swift */; };
-		81DA998C239E5DB80086E24A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA998B239E5DB80086E24A /* MainViewController.swift */; };
+		81DA998C239E5DB80086E24A /* BandsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DA998B239E5DB80086E24A /* BandsController.swift */; };
 		81DA998E239E5DB90086E24A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81DA998D239E5DB90086E24A /* Assets.xcassets */; };
 		81DA9991239E5DB90086E24A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81DA9990239E5DB90086E24A /* Preview Assets.xcassets */; };
 		81DA9994239E5DB90086E24A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81DA9992239E5DB90086E24A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		814B1069239E769600FB5E7E /* Band.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
+		814B106C239E7B0A00FB5E7E /* AddBandController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBandController.swift; sourceTree = "<group>"; };
 		81DA9984239E5DB80086E24A /* HardCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HardCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81DA9987239E5DB80086E24A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81DA9989239E5DB80086E24A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		81DA998B239E5DB80086E24A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		81DA998B239E5DB80086E24A /* BandsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsController.swift; sourceTree = "<group>"; };
 		81DA998D239E5DB90086E24A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81DA9990239E5DB90086E24A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81DA9993239E5DB90086E24A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,12 +36,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B21C9D239E8CC200290DBE /* LBTATools in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		814B106B239E76A700FB5E7E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				814B1069239E769600FB5E7E /* Band.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		814B106E239E7BAF00FB5E7E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				81DA998B239E5DB80086E24A /* BandsController.swift */,
+				814B106C239E7B0A00FB5E7E /* AddBandController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		81DA997B239E5DB80086E24A = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +79,10 @@
 		81DA9986239E5DB80086E24A /* HardCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				814B106B239E76A700FB5E7E /* Model */,
+				814B106E239E7BAF00FB5E7E /* Controllers */,
 				81DA9987239E5DB80086E24A /* AppDelegate.swift */,
 				81DA9989239E5DB80086E24A /* SceneDelegate.swift */,
-				81DA998B239E5DB80086E24A /* MainViewController.swift */,
 				81DA998D239E5DB90086E24A /* Assets.xcassets */,
 				81DA9992239E5DB90086E24A /* LaunchScreen.storyboard */,
 				81DA9995239E5DB90086E24A /* Info.plist */,
@@ -91,6 +115,9 @@
 			dependencies = (
 			);
 			name = HardCoreData;
+			packageProductDependencies = (
+				81B21C9C239E8CC200290DBE /* LBTATools */,
+			);
 			productName = HardCoreData;
 			productReference = 81DA9984239E5DB80086E24A /* HardCoreData.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 81DA997B239E5DB80086E24A;
+			packageReferences = (
+				81B21C9B239E8CC200290DBE /* XCRemoteSwiftPackageReference "LBTATools" */,
+			);
 			productRefGroup = 81DA9985239E5DB80086E24A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,8 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				81DA9988239E5DB80086E24A /* AppDelegate.swift in Sources */,
+				814B106D239E7B0A00FB5E7E /* AddBandController.swift in Sources */,
 				81DA998A239E5DB80086E24A /* SceneDelegate.swift in Sources */,
-				81DA998C239E5DB80086E24A /* MainViewController.swift in Sources */,
+				814B106A239E769600FB5E7E /* Band.swift in Sources */,
+				81DA998C239E5DB80086E24A /* BandsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		81B21C9B239E8CC200290DBE /* XCRemoteSwiftPackageReference "LBTATools" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bhlvoong/LBTATools.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.17;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		81B21C9C239E8CC200290DBE /* LBTATools */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 81B21C9B239E8CC200290DBE /* XCRemoteSwiftPackageReference "LBTATools" */;
+			productName = LBTATools;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 81DA997C239E5DB80086E24A /* Project object */;
 }
